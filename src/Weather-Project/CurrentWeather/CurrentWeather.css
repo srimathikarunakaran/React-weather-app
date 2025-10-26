@@ -1,0 +1,213 @@
+.Card {
+  max-width: 800px;
+   background: linear-gradient(135deg, #03274ed8, #4d4eacbe);
+  border: 1px solid rgba(253, 144, 144, 0.1);
+  margin: 80px auto;
+  border-radius: 20px;
+  padding: 30px 30px;
+  text-align: center;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.Card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* ========== SEARCH BAR ========== */
+.search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search input {
+  border: 0;
+  outline: 0;
+  background: rgba(161, 167, 248, 0.938);
+  color: rgb(37, 3, 70);
+  padding: 10px 15px;
+  border-radius: 30px;
+  flex: 1;
+  margin-right: 16px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+::placeholder{
+  color: #020f1d;
+}
+
+.search input:focus {
+  box-shadow: 0 0 15px rgba(0, 255, 200, 0.5);
+}
+
+.search button {
+  border: none;
+  outline: none;
+  background: linear-gradient(135deg, #020f1d, #6f70d9);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.search button img {
+  width: 18px;
+}
+
+.search button:hover {
+  transform: scale(1.15);
+  opacity: 0.85;
+}
+
+.search button:active {
+  transform: scale(0.95);
+}
+
+/* ========== WEATHER INFO (MAIN 2 COLUMNS) ========== */
+.weather-details-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Left Main Column */
+.left-main-col {
+  display: flex;
+  flex: 1;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Left Child Columns */
+.left-child-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.left-child-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Right Main Column */
+.right-main-col {
+  display: flex;
+  flex: 1;
+  gap: 15px;
+  justify-content: space-around;
+}
+
+/* Right Child Columns */
+.right-child-left,
+.right-child-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background 0.3s ease;
+   text-transform: capitalize;
+   color: #fff;
+  background: linear-gradient(135deg, #021830d8, #030575be);
+}
+
+.right-child-left:hover,
+.right-child-right:hover {
+  transform: scale(1.05);
+  background: rgba(255,255,255,0.1);
+}
+
+.right-child-left img,
+.right-child-right img {
+  width: 40px;
+  
+}
+
+/* Weather icon */
+.weather-icon {
+  width: 170px;
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.4));
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.weather-icon:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.7));
+}
+
+/* Temp & Condition */
+.temp {
+  font-size: 50px;
+  font-weight: 600;
+  margin: 0;
+  color: #1e022b;
+}
+
+.condition-text-pill {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 15px;
+  border-radius: 20px;
+  text-transform: capitalize;
+  margin-top: 8px;
+}
+
+/* ========== ERROR / LOADER ========== */
+.error {
+  text-align: center;
+  font-size: 15px;
+  color: #ff4b4b;
+  margin-top: 10px;
+}
+
+.loader {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #fff;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0.5; }
+}
+
+
+
+
+
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+  .weather-details-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .left-main-col, .right-main-col {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .weather-icon { width: 140px; }
+  .temp { font-size: 55px; }
+  .condition-text-pill { font-size: 16px; }
+}
+
+@media (max-width: 480px) {
+  .Card { padding: 20px 15px; }
+  .weather-icon { width: 120px; }
+  .temp { font-size: 45px; }
+  .condition-text-pill { font-size: 14px; }
+}

@@ -1,0 +1,73 @@
+.forecast-container {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 1150px;
+  border-radius: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+   
+   background: linear-gradient(135deg, #03274ed8, #4d4eacbe);
+}
+
+.forecast-card {
+ background: linear-gradient(135deg, #021830d8, #030575be);
+  border-radius: 15px;
+  padding: 15px;
+  width: 100px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.forecast-card:hover {
+  transform: scale(1.05);
+}
+
+.forecast-icon {
+  width: 50px;
+  margin: 5px 0;
+}
+.title h1{
+
+  background: linear-gradient(45deg, #5d07e7, #c70586);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 100px;
+  font-style: italic;
+
+}
+
+.day, .date {
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 400;
+  color: #cda6df;
+}
+
+.temp-forcast {
+  font-size: 16px;
+  font-weight: bold;
+  font-weight: 600;
+  margin: 0;
+  color: #e5b9fa;
+}
+
+/* Loader/Error */
+.forecast-loader, .forecast-error, .forecast-empty {
+  text-align: center;
+  color: #fff;
+  margin-top: 20px;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .forecast-container { gap: 10px; }
+  .forecast-card { width: 80px; padding: 10px; }
+  .forecast-icon { width: 40px; }
+  .temp { font-size: 14px; }
+}
