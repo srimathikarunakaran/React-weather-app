@@ -110,10 +110,11 @@ const WeatherCard = () => {
                   className="weather-icon"
                 />
               </div>
-              <div className="left-child-right">
-                <h1 className="temp">{displayedTemp}°C</h1>
-                <span className="condition-text-pill">{weather.condition}</span>
-              </div>
+                <div className="left-child-right">
+                 <h1 className="temp">{displayedTemp}°C</h1>
+                 <span className="condition-text-pill">Mostly {weather.condition}</span>
+                 <p className="city-name">{weather.city}</p>
+               </div>
             </div>
 
             <div className="right-main-col">

@@ -33,17 +33,13 @@
 }
 .title h1{
 
-  background: linear-gradient(45deg, #5d07e7, #c70586);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #f0f6ff;
   margin-left: 100px;
-  font-style: italic;
 
 }
 
 .day, .date {
   font-size: 24px;
-  font-style: italic;
   font-weight: 400;
   color: #cda6df;
 }

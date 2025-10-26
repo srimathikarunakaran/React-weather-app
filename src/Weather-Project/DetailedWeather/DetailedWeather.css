@@ -18,11 +18,8 @@
 }
 
 .title1 h2 {
-  background: linear-gradient(45deg, #6e1af7, #e741b0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+ color: #f0f6ff;
   margin-left: 100px;
-  font-style: italic;
  font-size: 30px;
 }
 
